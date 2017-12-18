@@ -1,0 +1,10 @@
+version: '2'
+services:
+    steemline:
+        build: ./../
+        image: steemline:latest
+        volumes:
+            - '../:/var/www/steemline'
+        ports:
+            - "81:81"
+            - "80:80"

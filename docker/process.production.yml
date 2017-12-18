@@ -1,0 +1,6 @@
+apps:
+  - script   : 'serve'
+    name     : 'steemline'
+    exec_mode: 'cluster'
+    env      : {"PM2_SERVE_PATH": 'dist/', "PM2_SERVE_PORT": 80}
+    instances: max
