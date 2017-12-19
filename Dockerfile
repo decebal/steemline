@@ -22,15 +22,19 @@ RUN apk add --no-cache --virtual .gyp \
     nasm \
     git \
     python \
-  && yarn install \
+  && npm i \
   && apk del .gyp
 
-# Build distribution (artecfacts that should be considered for removal)
-COPY src ./src
-COPY build ./build
-COPY config ./config
-COPY static ./static
-COPY docker/process.production.yml ./process.yml
+# Build Artefacts
+ADD src ./src
+ADD build ./build
+ADD config ./config
+ADD static ./static
+ADD .eslintrc.js ./.eslintrc.js
+ADD .babelrc ./.babelrc
+ADD .postcssrc.js ./.postcssrc.js
+ADD index.html ./index.html
+ADD docker/process.production.yml ./process.yml
 
 RUN npm run build
 

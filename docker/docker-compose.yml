@@ -5,6 +5,7 @@ services:
         image: steemline:latest
         volumes:
             - '../:/var/www/steemline'
+            - './process.production.yml:/var/www/steemline/process.yml'
         ports:
             - "81:81"
             - "80:80"
