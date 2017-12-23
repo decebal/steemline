@@ -41,10 +41,10 @@ For any contribution consider this directory: https://github.com/vuejs/awesome-v
 
 # Known Bugs
 
-- Sometimes the connection to steem can't be esteblished it seems.
+- Sometimes the connection to steem can't be established it seems.
 - Sometimes the animations and line sorting are broken or break on the go.
-- After up- or unvoting the vote state changes and flips back again once `updateAccount` is called (10 sec interval).
-- Clicking the upvote button of a post far to the right (last 3 or sth.) the slider will scroll back to the first post on the left.
+- After up- or un-voting the vote state changes and flips back again once `updateAccount` is called (10 sec interval).
+- Clicking the up-vote button of a post far to the right (last 3 or sth.) the slider will scroll back to the first post on the left.
 - Unfocussing the vote percentage dropdown makes the slider scroll right.
-- Dragging doesn't work correclty in firefox.
+- Dragging doesn't work correctly in firefox.
 - ...
