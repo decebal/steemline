@@ -3,6 +3,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import color from 'color';
+import { Provider } from 'reakit';
+import reakitTheme from 'reakit-theme-default';
 import themeList from '../libraries/theme';
 import { App as ThemedApp } from './Theme';
 
@@ -33,7 +35,9 @@ const App = ({ children, theme }: Props) => {
 
   return (
     <ThemeProvider theme={themeList[themeName]}>
-      <ThemedApp>{children}</ThemedApp>
+      <Provider theme={reakitTheme}>
+        <ThemedApp>{children}</ThemedApp>
+      </Provider>
     </ThemeProvider>
   );
 };

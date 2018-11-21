@@ -1,18 +1,28 @@
+/* eslint-disable no-unused-vars,import/no-unresolved */
 import { Helmet } from 'react-helmet';
+import { Heading, Avatar, Toolbar } from 'reakit';
+// import MenuIcon from 'react-icons/lib/md/menu';
 import App from '../components/App';
 import withData from '../libraries/withData';
-import { dump } from '../libraries/helpers';
 
-export default withData(props =>
+export default withData(props => (
   <App>
     <Helmet>
-      <title>index</title>
+      <title>SteemLine</title>
     </Helmet>
-    <div>
-      <h1>index</h1>
-      <p>HELLO WORLD! HELLO FROM RAN!</p>
-      <hr />
-      <pre>{dump(props)}</pre>
-    </div>
+
+    <Toolbar background="white" gutter="8px 16px">
+      {/* <Toolbar.Content> */}
+      {/* <Toolbar.Focusable as={MenuIcon} fontSize={20} /> */}
+      {/* </Toolbar.Content> */}
+      <Toolbar.Content align="center">
+        <Heading fontSize={24} margin={0}>
+          Reakit
+        </Heading>
+      </Toolbar.Content>
+      <Toolbar.Content align="end">
+        <Toolbar.Focusable as={Avatar} src="https://placekitten.com/150/200" />
+      </Toolbar.Content>
+    </Toolbar>
   </App>
-);
+));
